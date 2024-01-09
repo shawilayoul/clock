@@ -1,0 +1,141 @@
+body {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    background-color: lightyellow;
+    color: #fff;
+}
+
+.clock {
+    position: relative;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    background-color: lightsteelblue;
+    border: 5px solid lightslategrey;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, .7);
+    z-index: 1;
+}
+
+.rolex img {
+    position: absolute;
+    width: 70px;
+    left: 50%;
+    top: 60px;
+    transform: translateX(-50%);
+    font-size: 20px;
+    background-color: transparent;
+}
+
+.numbers div {
+    position: absolute;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.twelve {
+    top: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.six {
+    bottom: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.three {
+    top: 50%;
+    right: 6px;
+    transform: translateY(-50%);
+}
+
+.nine {
+    top: 50%;
+    left: 6px;
+    transform: translateY(-50%);
+}
+
+.time {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.time::before {
+    content: '';
+    width: 35px;
+    height: 35px;
+    background-color: green;
+    border-radius: 50%;
+    z-index: 4;
+}
+
+.time div {
+    position: absolute;
+    background-color: white;
+    width: 7px;
+    height: 120px;
+    border-radius: 50% 50% 0 0;
+    transform-origin: bottom center;
+    bottom: 50%;
+    z-index: 3;
+}
+
+.time .second {
+    transform: rotate(35deg);
+    height: 80px;
+}
+
+.time .minute {
+    transform: rotate(270deg);
+    background-color: orange;
+}
+
+.loading {
+    background-color: lightgray;
+    height: 300px;
+    margin-top: 30px;
+    width: 80%;
+    border-radius: 10px;
+    color: blueviolet;
+    position: relative;
+}
+
+.loading h3 {
+    top: 20px;
+    text-align: center;
+    font-size: 25px;
+}
+
+.bar {
+    position: absolute;
+    width: 80%;
+    top: 50%;
+    margin-left: 20px;
+    height: 20px;
+}
+
+.loading .bar hr {
+    position: absolute;
+    top: 50%;
+    height: 7px;
+    border: 0;
+}
+
+.loading .back-bar {
+    background-color: #fff;
+    width: 100%;
+}
+
+.loading .front-bar {
+    background-color: lightcoral;
+    z-index: 2;
+    width: 0%
+}
